@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peddy</title>
+    <link rel="shortcut icon" href="./assets/logo.webp" type="image/webp" />
+    <link rel="icon" href="./assets/logo.webp" type="image/webp" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="../cdn.jsdelivr.net/npm/daisyui%404.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="font-lato mx-auto">
+    <header class="mx-auto w-11/12 py-8">
+      <nav class="flex flex-wrap items-center justify-between">
+        <div class="logo flex gap-2 items-center">
+          <img
+            class="object-contain"
+            src="https://assinment-6-talha.surge.sh/assets/logo.webp"
+            alt=""
+          />
+          <h1 class="text-3xl font-black">Peddy</h1>
+        </div>
+        <div class="nav-link hidden md:flex">
+          <ul class="flex gap-8 text-gray-500">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="border rounded-full p-2">
+          <i class="fa-regular fa-user"></i>
+        </div>
+      </nav>
+      <!-- Hero Section -->
+      <section class="mx-auto w-11/12 items-center mt-8">
+        <div
+          class="flex flex-col justify-center items-center py-10 gap-y-7 gap-x-7"
+        >
+          <h2 class="text-2xl font-bold text-center text-gray-500">
+            Bringing Families Together 🔥
+          </h2>
+          <h1 class="text-3xl md:text-5xl font-extrabold text-center">
+            Find Your Perfect Companion <br />
+            Adopt a Pet and Change a Life Today!
+          </h1>
+          <p class="font-semibold text-center md:text-lg max-w-xl">
+            Adopting a pet is a life-changing experience that brings love, joy,
+            and companionship into your home. By choosing adoption, you give a
+            deserving animal a second chance at happiness while enriching your
+            own life. Start your journey today and make a lasting impact on a
+            pet’s life!
+          </p>
+          <a href="#scrollHere">
+            <button class="btn bg-[#0E7A81] text-white">View More</button>
+          </a>
+          <img
+            class="max-w-full h-auto mt-4"
+            src="https://assinment-6-talha.surge.sh/assets/pet.webp"
+            alt=""
+          />
+        </div>
+      </section>
+    </header>
+
+    <!-- Adopt Your Best Friend -->
+
+    <main class="mx-auto w-11/12">
+      <div id="adopt-sec" class="text-center space-y-3">
+        <h1 class="text-4xl font-black" id="scrollHere">
+          Adopt Your Best Friend
+        </h1>
+        <p class="font-semibold text-center md:text-lg">
+          Give love, get loyalty—start your adoption journey now.
+        </p>
+      </div>
+
+      <div
+        id="button-div"
+        class="flex flex-col md:flex-row justify-center md:justify-center gap-6 mt-11"
+      ></div>
+      <div class="flex justify-between p-5 flex-wrap">
+        <h1 class="text-xl font-black">Best Deal For you</h1>
+        <button id="sortButton" class="btn bg-[#0E7A81] text-white">
+          Sort by Price
+        </button>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:justify-evenly">
+        <div
+          id="card-container"
+          class="flex flex-wrap gap-6 lg:w-3/5 w-full"
+        ></div>
+
+        <div
+          id="img-container"
+          class="border w-full lg:w-2/5 grid-flow-row auto-rows-max grid grid-cols-2 p-4 gap-y-2 gap-x-2 rounded-xl"
+        ></div>
+      </div>
+
+      <!-- Pet details modal -->
+      <button
+        id="showModalData"
+        class="btn hidden"
+        onclick="customModal.showModal()"
+      >
+        open modal
+      </button>
+      <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div id="modal-Content"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Adopt Modal -->
+      <dialog id="adoptModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box text-center flex flex-col items-center">
+          <img
+            src="https://img.icons8.com/?size=100&amp;id=33824&amp;format=png&amp;color=000000"
+            alt=""
+          />
+          <h3 class="font-bold text-xl">Congratulations!</h3>
+          <p class="text-lg font-semibold">Now Goooo play with your pet.🐱</p>
+          <p id="countdown-timer" class="text-xl font-extrabold mt-4">3</p>
+        </div>
+      </dialog>
+    </main>
+    <footer class="bg-[#131313] h-fit !w-full mt-16 text-white">
+      <div
+        class="px-8 md:px-28 py-12 md:py-24 flex flex-col md:flex-row justify-evenly"
+      >
+        <div class="mb-8 md:mb-0">
+          <div class="logo flex gap-2 mb-6">
+            <img
+              class="object-contain"
+              src="https://assinment-6-talha.surge.sh/assets/logo.webp"
+              alt=""
+            />
+            <h1 class="text-3xl font-black">Peddy</h1>
+          </div>
+          <div class="space-y-3 mt-2">
+            <p>Location: av. Washington 165, NY CA 54003</p>
+            <p>Phone: +31 85 964 47 25</p>
+            <p>Email: info@yourdomain.com</p>
+            <p>Openings hours: 9.00 AM - 5.00 PM</p>
+          </div>
+          <div class="space-x-2 mt-2">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="md:mb-0">
+          <h1 class="font-bold text-2xl">Useful Links</h1>
+          <ul class="space-y-3 mt-8">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Animals</a></li>
+            <li><a href="#">Foundation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h1 class="font-bold text-2xl mt-8 lg:mt-0 md:mb-0">
+            Drop a Message
+          </h1>
+          <div class="space-y-4 mt-6">
+            <input
+              type="text"
+              placeholder="Type here"
+              class="input input-bordered w-full max-w-xs bg-[#1a1919] text-gray-500"
+            />
+            <button class="btn bg-[#0E7A81] border-none">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

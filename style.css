@@ -1,0 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+.active {
+  color: white;
+  background-color: teal;
+  border-radius: 1rem;
+  border: 2px;
+}
